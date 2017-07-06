@@ -21,6 +21,8 @@
 		FB2C51201F0C7E020074197A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB2C51211F0C7E020074197A /* WeatherWidgetX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherWidgetX.entitlements; sourceTree = "<group>"; };
 		FB3457EB1F0DECC1008B41C2 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		FB45A5BE1F0E0E56004D555C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FB45A5BF1F0E0E5E004D555C /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,8 @@
 		FB2C510B1F0C7E020074197A = {
 			isa = PBXGroup;
 			children = (
+				FB45A5BE1F0E0E56004D555C /* README.md */,
+				FB45A5BF1F0E0E5E004D555C /* LICENSE.md */,
 				FB2C51161F0C7E020074197A /* WeatherWidgetX */,
 				FB2C51151F0C7E020074197A /* Products */,
 			);
