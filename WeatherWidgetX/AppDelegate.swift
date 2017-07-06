@@ -79,18 +79,20 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		]
 		let aqiMenuItems = aqis.map { NSMenuItem(title: $0, action: #selector(tapGeneralItem), keyEquivalent: "") }
 		
-		let menu = NSMenu()
-		let items = [NSMenuItem(title: "Updated at " + DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .medium), action: nil, keyEquivalent: "")]
+		let menu = statusItem.menu!
+		menu.removeAllItems()
+		
+		let items: [NSMenuItem] = [NSMenuItem(title: "Updated at " + DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .medium), action: nil, keyEquivalent: "")]
 			+ [NSMenuItem.separator()]
 			+ forecastMenuItems
 			+ [NSMenuItem.separator()]
 			+ aqiMenuItems
 			+ [NSMenuItem.separator()]
-			+ [NSMenuItem(title: "Refresh", action: #selector(tapRefreshMenuItem), keyEquivalent: "R"),
-			   NSMenuItem(title: "Exit", action: #selector(tapExitMenuItem), keyEquivalent: "Q")]
+			+ [NSMenuItem(title: "Refresh", action: #selector(tapRefreshMenuItem), keyEquivalent: "R")]
+			+ [NSMenuItem.separator()]
+			+ [NSMenuItem(title: "Exit", action: #selector(tapExitMenuItem), keyEquivalent: "Q")]
 		
 		items.forEach(menu.addItem)
-		statusItem.menu = menu
 	}
 	
 	@objc private func tapGeneralItem(_ sender: NSMenuItem) {}
