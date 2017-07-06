@@ -80,8 +80,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		let aqiMenuItems = aqis.map { NSMenuItem(title: $0, action: #selector(tapGeneralItem), keyEquivalent: "") }
 		
 		let menu = NSMenu()
-		let items
-			= [NSMenuItem(title: "Updated at " + DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .medium), action: nil, keyEquivalent: "")]
+		let items = [NSMenuItem(title: "Updated at " + DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .medium), action: nil, keyEquivalent: "")]
 			+ [NSMenuItem.separator()]
 			+ forecastMenuItems
 			+ [NSMenuItem.separator()]
