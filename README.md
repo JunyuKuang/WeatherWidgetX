@@ -1,6 +1,6 @@
 # WeatherWidgetX
 View weather and air quality index infomation on the menu bar.
-Currently only support weather Changsha, China.
+Currently only support weather and AQI in Changsha, China.
 
 ![Screenshot](https://ws3.sinaimg.cn/large/006tNc79ly1fha52b9gaij30im0j8gqj.jpg)
 

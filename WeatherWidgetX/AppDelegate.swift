@@ -9,9 +9,16 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-	let statusItem: NSStatusItem = {
+final class AppDelegate: NSObject, NSApplicationDelegate {
+	
+	private struct WeatherURL {
+		// Current City ID is for Changsha, China. For more IDs please visit http://guolin.tech
+		private static let cityID = "CN101250101"
+		private static let key = "bc0418b57b2d4918819d3974ac1285d9"
+		static let url = URL(string: "http://guolin.tech/api/weather?cityid=\(cityID)&key=\(key)")!
+	}
+	
+	private let statusItem: NSStatusItem = {
 		let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 		statusItem.button?.title = "AQI"
 		
@@ -30,11 +37,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		Timer.scheduledTimer(timeInterval: 10 * 60, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
 	}
 	
-	@objc func refresh() {
+	@objc private func refresh() {
 		
-		let url = URL(string: "http://guolin.tech/api/weather?cityid=CN101250101&key=bc0418b57b2d4918819d3974ac1285d9")!
-		
-		URLSession.shared.dataTask(with: url) { data, _, error in
+		URLSession.shared.dataTask(with: WeatherURL.url) { data, _, error in
 			if let data = data {
 				do {
 					let weathers = try JSONDecoder().decode(Weathers.self, from: data)
@@ -59,7 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}.resume()
 	}
 	
-	func updateUI(with weather: Weather) {
+	private func updateUI(with weather: Weather) {
 		statusItem.button?.title = weather.now.temperature + "°C" + ", " + weather.aqi.city.aqi + " " + weather.aqi.city.quality
 		
 		let forecasts = weather.dailyForecasts.map {
@@ -88,13 +93,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		statusItem.menu = menu
 	}
 	
-	@objc func tapGeneralItem(_ sender: NSMenuItem) {}
+	@objc private func tapGeneralItem(_ sender: NSMenuItem) {}
 	
-	@objc func tapRefreshMenuItem(_ sender: NSMenuItem) {
+	@objc private func tapRefreshMenuItem(_ sender: NSMenuItem) {
 		refresh()
 	}
 	
-	@objc func tapExitMenuItem(_ sender: NSMenuItem) {
+	@objc private func tapExitMenuItem(_ sender: NSMenuItem) {
 		NSApp.terminate(self)
 	}
 }
