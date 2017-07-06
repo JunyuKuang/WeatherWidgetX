@@ -65,7 +65,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 	
 	private func updateUI(with weather: Weather) {
-		statusItem.button?.title = weather.now.temperature + "°C" + ", " + weather.aqi.city.aqi + " " + weather.aqi.city.quality
+		statusItem.button?.title = " " + weather.now.temperature + "°C" + ", " + weather.aqi.city.aqi + " " + weather.aqi.city.quality + " "
 		
 		let forecasts = weather.dailyForecasts.map {
 			DateFormatter.localizedString(from: $0.dateComponents!.date!, dateStyle: .medium, timeStyle: .none) + "  " + $0.temperature.min + "°C" + " - " + $0.temperature.max + "°C  " + $0.more.info
