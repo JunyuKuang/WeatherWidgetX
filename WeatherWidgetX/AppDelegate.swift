@@ -122,7 +122,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		if let aqi = weather.aqi?.city.aqi, let airQuality = weather.aqi?.city.qlty {
 			statusItem.button?.title = " \(weather.now.temperature)°C \(weather.now.more.info), \(aqi) \(airQuality) "
 		} else {
-			statusItem.button?.title = " " + weather.now.temperature + "°C"
+			statusItem.button?.title = " \(weather.now.temperature)°C \(weather.now.more.info)"
 		}
 		
 		let forecasts = weather.dailyForecasts.map {
