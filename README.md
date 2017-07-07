@@ -5,7 +5,7 @@ Currently only support weather and AQI in Changsha, China.
 ![Screenshot](https://ws3.sinaimg.cn/large/006tNc79ly1fha52b9gaij30im0j8gqj.jpg)
 
 ## Download
-[Latest release](https://github.com/JunyuKuang/WeatherWidgetX/releases/tag/v1.1.1)
+[Latest release](https://github.com/JunyuKuang/WeatherWidgetX/releases)
 
 ## Build Requirement
 - Xcode 9.0+
