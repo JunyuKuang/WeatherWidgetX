@@ -1,6 +1,8 @@
 # WeatherWidgetX
 View weather and air quality index infomation on the menu bar.
-Currently only support weather and AQI in Changsha, China.
+Currently support view weather and AQI* for cities in mainland China, Hong Kong, Macao, and Taiwan.
+
+* AQI is not available in some area.
 
 ![Screenshot](https://ws3.sinaimg.cn/large/006tNc79ly1fha52b9gaij30im0j8gqj.jpg)
 
