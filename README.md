@@ -5,7 +5,7 @@ Currently support view weather and AQI* for cities in mainland China, Hong Kong,
 
 * AQI is not available in some cities.
 
-![Screenshot](https://ws3.sinaimg.cn/large/006tNc79ly1fha52b9gaij30im0j8gqj.jpg)
+![Screenshot](https://ws4.sinaimg.cn/large/006tNc79ly1fhbci2h9rnj30om1j848p.jpg)
 
 ## Download
 [Latest release](https://github.com/JunyuKuang/WeatherWidgetX/releases)
