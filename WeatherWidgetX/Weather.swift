@@ -30,7 +30,7 @@ struct Weather : Codable {
 	
 	let status: String
 	let basic: Basic
-	let aqi: AQI
+	let aqi: AQI?
 	let now: Now
 	let suggestion: Suggestion
 	let dailyForecasts: [Forecast]
@@ -61,16 +61,17 @@ struct Weather : Codable {
 		let city: City
 		
 		struct City : Codable {
-			let aqi: String
-			let co: String
-			let no2: String
-			let o3: String
-			let pm10: String
-			let pm25: String
-			let so2: String
+			let aqi: String?
+			let pm10: String?
+			let pm25: String?
+			let co: String?
+			let no2: String?
+			let o3: String?
+			let so2: String?
+			let qlty: String?
 			
-			var quality : String {
-				guard let intValue = Int(aqi) else { return "" }
+			var quality : String? {
+				guard let aqi = aqi, let intValue = Int(aqi) else { return "" }
 				switch intValue {
 				case 0...50:
 					return "Excellent"
