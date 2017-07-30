@@ -26,7 +26,7 @@
 		FB2DE1FF1F0F66FE0094BE21 /* NationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationJSON.swift; sourceTree = "<group>"; };
 		FB3457EB1F0DECC1008B41C2 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		FB45A5BE1F0E0E56004D555C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FB45A5BF1F0E0E5E004D555C /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		FBD71E541F2E1A85005502BB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				FB45A5BE1F0E0E56004D555C /* README.md */,
-				FB45A5BF1F0E0E5E004D555C /* LICENSE.md */,
+				FBD71E541F2E1A85005502BB /* LICENSE */,
 				FB2C51161F0C7E020074197A /* WeatherWidgetX */,
 				FB2C51151F0C7E020074197A /* Products */,
 			);
