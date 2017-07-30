@@ -102,17 +102,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 					}
 				} catch {
 					print(error)
-					DispatchQueue.main.async {
-						let alert = NSAlert(error: error)
-						alert.runModal()
-					}
+//                    DispatchQueue.main.async {
+//                        let alert = NSAlert(error: error)
+//                        alert.runModal()
+//                    }
 				}
 			} else if let error = error {
 				print(error)
-				DispatchQueue.main.async {
-					let alert = NSAlert(error: error)
-					alert.runModal()
-				}
+//                DispatchQueue.main.async {
+//                    let alert = NSAlert(error: error)
+//                    alert.runModal()
+//                }
 			}
 		}.resume()
 	}
